@@ -35,8 +35,3 @@ class Users extends Database
     parent::setData($sql, $data);
   }
 }
-$instanceOfUser = new Users();
-$instanceOfUser->getAllUsers();
-    // $instanceOfUser->getOneUser(["Bms"]);
-// $instanceOfUser->updateUser(["Bms10", "newpw", 1]);
-// $instanceOfUser->deleteUser(["test"]);

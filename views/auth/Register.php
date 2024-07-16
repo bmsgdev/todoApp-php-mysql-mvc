@@ -1,4 +1,6 @@
-<?php //username, mail,password,confirm password 
+<?php //username, mail,password,confirm password
+    require "../model/UserModel.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $username =htmlspecialchars(trim($_POST["username"]));
     $email = htmlspecialchars(trim($_POST["email"]));
@@ -20,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
         echo "Les mots de passe ne correspondent pas.";
         exit();
     } 
-    require "../model/UserModel.php";
     $user = new Users();
     $data = [$username, $email, password_hash($password, PASSWORD_DEFAULT)];  
     $user->createUser($data);

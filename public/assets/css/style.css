@@ -159,7 +159,8 @@ form input[type="submit"]:hover{
 
 .task-container{
   margin: 0px auto;
-  width: 80%;
+  width: 100%;
+  text-align: center;
 }
 .btn-edit-task{
   background-color: #007bff;

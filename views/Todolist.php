@@ -1,5 +1,12 @@
 <?php
-//username, mail,password,confirm password
+require "../model/Taskmodel.php";
+$taskModel = new TaskModel();
+// recuperation des données du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add"])) {
+    $task = $_POST["task"];
+    $taskModel->addTask([$task]);
+}
+
 ?>
 <?php
 include_once("../views/partials/head.php");
@@ -14,24 +21,25 @@ include_once("../views/partials/head.php");
     <main>
         <!-- Todo list  table-->
         <h1>Mes tâches</h1>
-        <form action="" method="post" class="task-form">
-            <input type="text" name="" id="" placeholder="ma nouvelle tâche...">
-            <button class="btn-add">Add</button>
+        <form action="/todo-list" method="post" class="task-form">
+            <input type="text" name="task" id="" placeholder="ma nouvelle tâche...">
+            <button class="btn-add" name="add">add </button>
+            <!-- <input type="submit" value="Add" class="btn-add" name="add"> -->
         </form>
         <ul class="tasks-container">
-            <?php
-            require("../model/UserModel.php");
-            $usersIstance = new Users();
-            $users = $usersIstance->getAllUsers();
-            foreach ($users as $user) { ?>
-                <li class="task">
-                    <?php echo $user['username'] ?>
-                    <span>
-                        <a href="" class="btn-edit-task">Edit</a>
-                        <a href="" class="btn-delete-task">Delete</a>
-                    </span>
-                </li>
-            <?php } ?>
+            
+                <?php
+                $ist = new taskModel();
+                $tasks = $ist->getAllTask();
+                foreach ($tasks as $task) {
+                ?>
+                    <li class="task"><?php echo $task['task_text'] ?>
+                        <span>
+                            <a href="" class="btn-edit-task">Edit</a>
+                            <a href="" class="btn-delete-task">Delete</a>
+                        </span>
+                    </li>
+                <?php } ?>
         </ul>
     </main>
     <?php
