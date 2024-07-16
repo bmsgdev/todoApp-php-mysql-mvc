@@ -2,7 +2,7 @@
 //username, mail,password,confirm password
 ?>
 <?php
-include_once("./partials/head.php");
+include_once("../views/partials/head.php");
 ?>
 
 <body>
@@ -14,26 +14,28 @@ include_once("./partials/head.php");
     <main>
         <!-- Todo list  table-->
         <h1>Mes tâches</h1>
-        <form action="" method="post">
+        <form action="" method="post" class="task-form">
             <input type="text" name="" id="" placeholder="ma nouvelle tâche...">
-            <button>Add</button>
+            <button class="btn-add">Add</button>
         </form>
-        <ul>
+        <ul class="tasks-container">
             <?php
             require("../model/UserModel.php");
             $usersIstance = new Users();
             $users = $usersIstance->getAllUsers();
             foreach ($users as $user) { ?>
-                <li>
+                <li class="task">
                     <?php echo $user['username'] ?>
-                    <a href="">Edit</a>
-                    <a href="">Delete</a>
+                    <span>
+                        <a href="" class="btn-edit-task">Edit</a>
+                        <a href="" class="btn-delete-task">Delete</a>
+                    </span>
                 </li>
             <?php } ?>
         </ul>
     </main>
     <?php
-    include_once("./partials/footer.php");
+    include_once("../views/partials/footer.php");
     ?>
 </body>
 
