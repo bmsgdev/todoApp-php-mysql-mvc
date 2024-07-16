@@ -1,0 +1,105 @@
+/* register form style*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: background-color 0.5s;
+}
+header nav {
+  background-color: #007bff;
+  height: 50px;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul a {
+    color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+}
+main{
+    margin: 50px auto;
+ 
+}
+form {
+  margin: 0px auto;
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  background-color: #f1f1f1;
+  color: #333;
+  box-sizing: border-box;
+  resize: vertical;
+
+  letter-spacing: 0.5px;
+}
+form input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+form input[type="submit"]:hover{
+    opacity: 1;
+}
+.have-account {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  font-size: 14px;
+}
