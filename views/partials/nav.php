@@ -1,8 +1,8 @@
  <nav>
      <ul>
-         <li><a href="./homeView.php">Home</a></li>
-         <li><a href="./todolistView.php">Todo List</a></li>
-         <li><a href="./loginView.php">Login</a></li>
-         <li><a href="./registerView.php">Register</a></li>
+         <li><a href="/">Home</a></li>
+         <li><a href="/todos-home">Todo List</a></li>
+         <li><a href="/login-home">Login</a></li>
+         <li><a href="/register-home">Register</a></li>
      </ul>
  </nav>

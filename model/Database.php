@@ -29,8 +29,6 @@ abstract class Database
             $bdd = $this->db;
             $req = $bdd->prepare($sql);
             $req->execute($data);
-            echo "requette aboutie";
-            // return $req->rowCount();
         } catch (PDOException $e) {
             echo "Erreur lors de la requette : " . $e->getMessage();
         }
@@ -57,30 +55,7 @@ abstract class Database
             echo "Erreur lors de la recupération des données : " . $e->getMessage();
         }
     }
-    // protected function deleteData($sql, $data)
-    // {
-    //     try {
-    //         $bdd = $this->db;
-    //         $req = $bdd->prepare($sql);
-    //         $req->execute($data);
-    //         echo "data has been deleted";
-    //     } catch (PDOException $e) {
-    //         echo "Erreur lors de la supprision :" . $e->getMessage();
-    //     }
-    // }
-    // protected function updateData($sql, $data){
-    //     try{
-    //         $bdd= $this->db;
-    //         $req = $bdd->prepare($sql);
-    //         $req->execute($data);
-    //         echo " data update";
-    //     }catch ( PDOException $e){
-    //         echo "erreur lors de la mise à jour". $e->getMessage();
-    //     }
-    // }
 }
 
 
-// $sql = "SELECT * FROM users WHERE username=?";
-// $data= ["Bms"];
-// getOneData($data,$sql);
+

@@ -1,2 +1,2 @@
 <?php
-echo"Index";
+require_once ("../routes/routes.php");

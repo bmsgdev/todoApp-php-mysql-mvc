@@ -7,9 +7,8 @@ class Users extends Database
   {
     $sql = "SELECT * FROM users";
     return parent::getManyData($sql);
-    // print_r($users);                               
   }
-
+ 
   public function getOneUser($username)
   {
     $sql = "SELECT * FROM users WHERE username=? ";
@@ -30,9 +29,8 @@ class Users extends Database
     $sql = "DELETE FROM users WHERE username=?";
     parent::setData($sql, $data);
   }
+   public function createUser($data){
+    $sql = "INSERT INTO users(username,email,password) VALUES (?,?,?)";
+    parent::setData($sql, $data);
+  }
 }
-$instanceOfUser = new Users();
-$instanceOfUser->getAllUsers();
-    // $instanceOfUser->getOneUser(["Bms"]);
-// $instanceOfUser->updateUser(["Bms10", "newpw", 1]);
-// $instanceOfUser->deleteUser(["test"]);

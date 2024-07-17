@@ -103,3 +103,97 @@ form input[type="submit"]:hover{
   color: #333;
   font-size: 14px;
 }
+.home-title{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.home-p{
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.home-button{
+
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  /*  a button design*/
+  transition: background-color 0.3s;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* end of button design*/
+  text-align: center;
+}
+
+/*Tasks page*/
+.task-form{
+  flex-direction: row;
+}
+.btn-add{
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  /*  a button design*/
+  transition: background-color 0.3s;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* end of button design*/
+  text-align: center;
+}
+
+.task-container{
+  margin: 0px auto;
+  width: 100%;
+  text-align: center;
+}
+.btn-edit-task{
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  /* end of button design*/
+}
+.task{
+  /*li task*/
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-delete-task{
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  /*  a button design*/
+  transition: background-color 0.3s;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  /* end of button design*/
+}
