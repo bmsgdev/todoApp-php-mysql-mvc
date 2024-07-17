@@ -27,19 +27,19 @@ include_once("../views/partials/head.php");
             <!-- <input type="submit" value="Add" class="btn-add" name="add"> -->
         </form>
         <ul class="tasks-container">
-            
-                <?php
-                $ist = new taskModel();
-                $tasks = $ist->getAllTask();
-                foreach ($tasks as $task) {
-                ?>
-                    <li class="task"><?php echo $task['task_text'] ?>
-                        <span>
-                            <a href="" class="btn-edit-task">Edit</a>
-                            <a href="" class="btn-delete-task">Delete</a>
-                        </span>
-                    </li>
-                <?php } ?>
+
+            <?php
+            $ist = new taskModel();
+            $tasks = $ist->getAllTask();
+            foreach ($tasks as $task) {
+            ?>
+                <li class="task"><?php echo $task['task_text'] ?>
+                    <span>
+                        <a href="" class="btn-edit-task">Edit</a>
+                        <a href="" class="btn-delete-task">Delete</a>
+                    </span>
+                </li>
+            <?php } ?>
         </ul>
     </main>
     <?php

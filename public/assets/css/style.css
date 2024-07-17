@@ -170,8 +170,6 @@ form input[type="submit"]:hover{
   border-radius: 5px;
   padding: 5px 10px;
   margin-left: 10px;
-  /*  a button design*/
-  transition: background-color 0.3s;
   text-decoration: none;
   letter-spacing: 0.5px;
   font-size: 14px;
