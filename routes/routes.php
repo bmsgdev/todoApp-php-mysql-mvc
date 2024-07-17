@@ -10,9 +10,7 @@ $route=explode('-', $route);
 // var_dump($route);
 $controller= $route[0] ?? '/'; //la route 
 $controller = substr($controller, 1) ;
-echo $controller.'<br>';
 $action= $route[1] ?? 'home' ; //la méthode ou l'action 
-echo $action.'action';
 
 if (isset($controller)) {
     switch ($controller) {

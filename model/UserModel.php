@@ -7,7 +7,6 @@ class Users extends Database
   {
     $sql = "SELECT * FROM users";
     return parent::getManyData($sql);
-    // print_r($users);                               
   }
  
   public function getOneUser($username)

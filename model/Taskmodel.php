@@ -7,7 +7,6 @@ class taskModel extends Database
     {
         $sql = "SELECT * FROM tasks";
         return parent::getManyData($sql);
-        // print_r($tasks);                               
     }
 
     public function getOneTask($id)
@@ -15,7 +14,6 @@ class taskModel extends Database
         $sql = "SELECT * FROM tasks WHERE id=? ";
         $data = array($id);
         $user = parent::getOneData($data, $sql);
-        print_r($user);
     }
 
     public function updateTask($data)
